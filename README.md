@@ -46,7 +46,8 @@ Datax-Migration目前对关系型数据库的直接使用是基本没有问题�
 * mvn clean install
 * download [DataX可以运行的bin下载地址](http://datax-opensource.oss-cn-hangzhou.aliyuncs.com/datax.tar.gz)
 * copy target/datax-migration.jar and target/datax-migration_lib to datax home directory.
-* open the target/datax-migration.jar, edit the config.properties, config migration db information source/target url, dbname, user, password, etc.
+* open the datax-migration.jar, edit the config.properties, config migration db information source/target url, dbname, user, password, etc.
+* open the datax-migration.jar, edit the job/jobtemplate.json accordingly, default it migration from mysqlreader->mysqlwriter
 * java -jar datax-migration.jar
 
 ## Config.properties Detail Properties
