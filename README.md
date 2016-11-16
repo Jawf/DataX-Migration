@@ -1,6 +1,6 @@
 # DataX-Migration
 **DataX-Migration** is Yxt (Yunxuetang) Full Database Migration Tool based on Alibaba DataX 3.0. Support Database Migration among Mysql, Oracle, SqlServer, PostgreSql. And support where condition when migration.
-**DataX-Migration** 是云学堂开源的基于阿里巴巴DataX 3.0的数据库迁移工具。支持对Mysql，Oracle，SqlServer PostgreSql之间的相互迁移, 并支持带where查询条件来进行迁移。
+**DataX-Migration** 是云学堂开源的基于阿里巴巴DataX 3.0的数据库迁移工具。支持对Mysql，Oracle，SqlServer, PostgreSql之间的相互迁移, 支持迁移时带where查询条件，并生成迁移数据报表。
 
 ## DataX是什么?
 
