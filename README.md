@@ -11,11 +11,12 @@
 关于更详细的介绍请看这里：https://github.com/alibaba/DataX/wiki/DataX-Introduction
 
 ## 为什么还需要DataX-Migration
-DataX专注于对数据的同步，它使用脚本以及可配置的方式，以一个个独立的脚本任务，非常方便地对单表的数据进行同步操作。但我们需要更加智能或自动的方式同步整个数据库，所以我们对DataX进行了包装，以更方便地进行整个数据库的迁移工作。
+**DataX**专注于对数据的同步，它使用脚本以及可配置的方式，以一个个独立的脚本任务，非常方便地对单表的数据进行同步操作。但我们需要更加智能或自动的方式同步整个数据库，所以我们对DataX进行了包装，以更方便地进行整个数据库的迁移工作。
 
 ## DataX-Migration的功能
-**DataX-Migration** 能根据用户配置数据库表tables的查询条件，生成这些数据库表的单独的DataX json配置，然后启动DataX的脚本来开始这些表的数据迁移，并生成相应的cvs报表。当表的数量过多时，可以配置切分策略来划分出多个线程来同时做迁移已加快迁移数据。
-
+**DataX-Migration** 能根据用户配置数据库表tables的查询条件，生成这些数据库表的单独的DataX json配置，然后启动DataX的脚本来开始这些表的数据迁移，并生成相应的cvs**报表**。当表的数量过多时，可以配置切分策略来划分出**多个线程**来同时做迁移已加快迁移数据。
+   
+![DataX-Migration Report](https://github.com/Jawf/driver/blob/master/datax_migration_report_20161115.png?raw=true)
 
 ## Support Data Channels
 
