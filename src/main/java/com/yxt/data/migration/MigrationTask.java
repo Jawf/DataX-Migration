@@ -116,20 +116,19 @@ public class MigrationTask {
 								String threadString = "Thread "+ threadId + " - ";
 								if (breakFlag){
 									logInfo.append(threadString+"Breaked as got exception in one jobs thread").append("\n");
+									log.info(logInfo.toString());
 									break;
 								}
 								DataTableStatus geTableBean = allTableStatus.get(t1);
 								String sourceTableName = geTableBean.getName();
 								if (isIgnoreTables(sourceTableName)){
 									logInfo.append(threadString+sourceTableName + " ingored as it configed as ingored table").append("\n");
+									log.info(logInfo.toString());
 									continue;
 								}
 								if (isIgnoreBigTables(geTableBean.getSize())){
 									logInfo.append(threadString+sourceTableName + " ingored as its size too bigger than the configured size").append("\n");
-									continue;
-								}
-								if (geTableBean.getSize()==0){
-									logInfo.append(threadString+sourceTableName + " ingored as its size=0\n");
+									log.info(logInfo.toString());
 									continue;
 								}
 								logInfo.append(threadString+sourceTableName+" job start to transfer...\n");
@@ -141,6 +140,12 @@ public class MigrationTask {
 									long pendingCount = viewer.getSourceTransfterTableMigrationCount(sourceTableName, whereClause);
 									geTableBean.setPendingRecords(pendingCount);
 									
+									if (pendingCount == 0) {
+										logInfo.append(threadString + sourceTableName + " ingored as its count=0\n");
+										log.info(logInfo.toString());
+										continue;
+									}
+									
 									if (!skipCommandFlag){
 										//Execute Command
 										String cmd = getCommand(sourceTableName);
@@ -149,6 +154,7 @@ public class MigrationTask {
 											if (hasException){
 												breakFlag = true;
 												logInfo.append(threadString+sourceTableName+" breaked as got exception in this jobs thread").append("\n");
+												log.info(logInfo.toString());
 												break;
 											}
 										}
@@ -159,6 +165,7 @@ public class MigrationTask {
 									if (!"true".equalsIgnoreCase(config.getErrorContinue())) {
 										breakFlag = true;
 										logInfo.append(threadString+sourceTableName+" breaked as got exception in this jobs thread").append("\n");
+										log.info(logInfo.toString());
 										break;
 									}
 								} finally {
@@ -171,6 +178,7 @@ public class MigrationTask {
 										if (!"true".equalsIgnoreCase(config.getErrorContinue())) {
 											breakFlag = true;
 											logInfo.append(threadString+sourceTableName+" breaked as got exception in this jobs thread").append("\n");
+											log.info(logInfo.toString());
 											break;
 										}
 									}

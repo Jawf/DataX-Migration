@@ -35,6 +35,9 @@ public class ApplicationBoot {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		log.info(" --- DataX-Migration 1.0, From Yunxuetang(www.yxt.com), Based on Alibaba DataX !");
+		log.info(" --- Copyright (C) 2010-2016, Yuexuetang Group. All Rights Reserved.");
 
 		boolean onlyReportFlag = false;
 		boolean onlyGenerateFlag = false;
