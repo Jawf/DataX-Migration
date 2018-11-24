@@ -53,7 +53,7 @@ Datax-Migration目前对关系型数据库的直接使用是基本没有问题�
 1. download [DataX可以运行的bin下载地址](http://datax-opensource.oss-cn-hangzhou.aliyuncs.com/datax.tar.gz)
 2. git clone https://github.com/Jawf/datax-migration.git (也可从下面的链接直接下载)
 3. mvn clean install
-4. copy target/datax-migration.jar and target/datax-migration_lib to datax home directory.
+4. copy target/datax-migration.jar and target/datax-migration_lib to datax/ home directory.
 5. open the datax-migration.jar, edit the config.properties, config migration db information source/target url, dbname, user, password, etc.
 6. open the datax-migration.jar, edit the job/jobtemplate.json accordingly, default it migration from mysqlreader->mysqlwriter
 7. java -jar datax-migration.jar
