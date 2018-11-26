@@ -105,6 +105,6 @@ java -jar datax-migration.jar run #Only run the migration and generate the cvs r
 
 ## FAQ
 ```
-- 1. config.properties 里面需要，替换sourcedbname, targetdbname，要用搜索替换:)   已有同学再此踩坑了..
+1. config.properties 里面需要，替换sourcedbname, targetdbname，要用搜索替换:)   已有同学在此踩坑了..
 ```
 
