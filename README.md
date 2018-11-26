@@ -100,3 +100,9 @@ java -jar datax-migration.jar run #Only run the migration and generate the cvs r
 - 问题可以直接 [issue](https://github.com/Jawf/datax-migration/issues/new) 我们
 - Email: <homcto@gmail.com>
 - Wechat: jawfneo
+
+## 目前此项目已经被不少同学使用过了，也积赞了一些star，希望同学们多提供宝贵都意见或提交代码，多Pull Request
+
+## FAQ
+- 1. config.properties 里面需要，替换sourcedbname, targetdbname，要用搜索替换:)   已有同学再此踩坑了..
+
