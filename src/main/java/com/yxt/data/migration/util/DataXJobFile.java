@@ -41,6 +41,7 @@ public class DataXJobFile {
 		json = json.replace("{source.db.table.pk}", pk == null ? "" : pk);
 		json = json.replace("{source.db.table.name}", sourceTableName);
 		json = json.replace("{source.db.url}", config.getSourceDbUrl());
+		json = json.replace("{source.db.type}", getDbType(config.getSourceDbUrl()));
 		
 		if (whereClause!=null && !"".equals(whereClause)){
 			json = json.replace("{source.db.table.where.clause}",
@@ -54,6 +55,7 @@ public class DataXJobFile {
 		json = json.replace("{target.db.table.columns}", cols);
 		json = json.replace("{target.db.table.name}", targetTableName);
 		json = json.replace("{target.db.url}", config.getTargetDbUrl());
+		json = json.replace("{target.db.type}", getDbType(config.getTargetDbUrl()));
 
 		//log.info(json);
 
@@ -65,6 +67,19 @@ public class DataXJobFile {
 		}
 	}
 
+	private static String getDbType(String dbUrl) {
+		String dbType = null;
+		if (dbUrl != null) {
+			String url = dbUrl.replaceFirst("jdbc:", "");
+			url = url.replaceFirst("microsoft:", "");
+			dbType = url.substring(0, url.indexOf(":"));
+			if (dbType.indexOf("-") > 0) {
+				dbType = dbType.substring(0, dbType.indexOf("-"));
+			}
+		}
+		return dbType;
+	}
+	
 	private int getChannelNumber(long migrationRecords) {
 		int result = 1;
 		if ("true".equalsIgnoreCase(config.getDataxUseMultipleChannel()) && migrationRecords > 0) {
