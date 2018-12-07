@@ -12,7 +12,7 @@
         "content": [
             {
                 "reader": {
-                    "name": "mysqlreader",
+                    "name": "{source.db.type}reader",
                     "parameter": {
                         "username":"{source.db.username}",
                         "password":"{source.db.password}",
@@ -32,7 +32,7 @@
                     }
                 },
                 "writer": {
-                    "name": "mysqlwriter",
+                    "name": "{target.db.type}writer",
                     "parameter": {
                         "username":"{target.db.username}",
                         "password":"{target.db.password}",
