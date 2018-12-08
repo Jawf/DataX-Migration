@@ -63,7 +63,7 @@ Datax-Migration目前对关系型数据库的直接使用是基本没有问题�
  
 ## Special Function
 ``` python
-java -jar datax-migration.jar json #Only generate json files config for all tables.
+java -jar datax-migration.jar json #Only generate json files config for all tables, may required to modify the reader and writer or columns accordingly.
 java -jar datax-migration.jar report #Only generate cvs report to view migration status.
 java -jar datax-migration.jar run #Only run the migration and generate the cvs reports. Before run this, need generate json config files for all tables first.
 ```
