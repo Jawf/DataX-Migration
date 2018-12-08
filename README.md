@@ -58,8 +58,8 @@ Datax-Migration目前对关系型数据库的直接使用是基本没有问题�
 6. open the datax-migration.jar, edit the job/jobtemplate.json accordingly, default it migration from mysqlreader->mysqlwriter
 7. java -jar datax-migration.jar
 ```
-[DataX-Migration可以运行的bin下载地址(DataX-Mirgration runable jar downlad)](https://github.com/Jawf/driver/blob/master/datax/datax-migration.zip?raw=true)
-[DataX可以运行的bin下载地址(DataX runable bin files download)](http://datax-opensource.oss-cn-hangzhou.aliyuncs.com/datax.tar.gz)
+- [DataX-Migration可以运行的bin下载地址(DataX-Mirgration runable jar downlad)](https://github.com/Jawf/driver/blob/master/datax/datax-migration.zip?raw=true)
+- [DataX可以运行的bin下载地址(DataX runable bin files download)](http://datax-opensource.oss-cn-hangzhou.aliyuncs.com/datax.tar.gz)
  
 ## Special Function
 ``` python
